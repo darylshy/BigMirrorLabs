@@ -1,0 +1,5 @@
+div h1:nth-child(even) {
+  color: red; }
+
+div h1:nth-child(odd) {
+  color: blue; }
