@@ -11,3 +11,20 @@ img {
 
 h1 {
   margin: 15px 0 0 0; }
+
+@media only screen and (max-width: 1200px) {
+  #ghosts {
+    margin-top: 5px; } }
+
+@media only screen and (max-width: 991px) {
+  #ghosts {
+    margin-top: 10px; } }
+
+@media only screen and (max-width: 767px) {
+  #ghosts {
+    width: calc(100%/2);
+    height: calc(100%/2); }
+  .row1, .row2, .row3 {
+    text-align: center; }
+    .row1 .info, .row2 .info, .row3 .info {
+      text-align: inherit; } }
