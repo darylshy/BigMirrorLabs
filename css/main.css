@@ -1,16 +1,15 @@
-.container .container_body {
-  background-color: #d3d3d3;
-  margin-left: -15px;
-  width: calc(100% + 30px); }
-  .container .container_body .row:nth-child(even) {
-    border: 1px red;
-    border-style: dashed none; }
+.container .row {
+  background-color: #d3d3d3; }
+
+.container .row:nth-child(even) {
+  border: 1px red;
+  border-style: dashed none; }
 
 .container div.info {
   padding-left: 5px; }
 
 .container #secret.container_header {
-  color: #d3d3d;
+  color: #d3d3d3 !important;
   padding: 5px;
   margin-top: 20px; }
 
