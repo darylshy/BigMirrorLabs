@@ -1,14 +1,23 @@
 
+(()=>{
+
+//cache the DOM
 let DOM = $("body");
+
+//set aside the clear and secret containers for later use
 let $_clear = DOM.find('#clear');
 let $_secret = DOM.find('#secret');
+
+//color array will help manage adding and subtracting color classes from secret div
 let colorArray = [];
 
-
 let url = "https://private-f3b4b-interview2.apiary-mock.com/data"
+
+//store ajax response in variable 
 let myMgs = $.get(url, data=> data);
 
-$_clear.on('click', (e)=>{
+//click event manages the clear button
+$_clear.on('click', ()=>{
 		if (colorArray.length>0) {
 			$_secret.removeClass(colorArray[0]);
 			$_secret.html("???");
@@ -19,9 +28,12 @@ $_clear.on('click', (e)=>{
 		}
 });
 
+//resolve ajax request with a Promise
 myMgs.then( (data)=> {
 		let container_body = DOM.find(".container > .container_body");
 		let i = 0;
+
+		//build out the character rows
 		data.forEach((user)=>{
 			i++;
 			let url = user.image;
@@ -35,6 +47,7 @@ myMgs.then( (data)=> {
 			infoNumber.append(`<h1>${name}</h1>`);
 			infoNumber.append(`<p>${moment(parseInt(timestamp)).subtract(1, 'months').format('M/D/YYYY')}</p>`);
 
+			//add a click event to each character row to change the color of the secret element
 			rowNumber.on('click', (e)=>{
 				let $_target = e.delegateTarget;
 				let secretColor = $_target.dataset.secret;
@@ -51,4 +64,5 @@ myMgs.then( (data)=> {
 			});
 		});
 	});
+})();
 
