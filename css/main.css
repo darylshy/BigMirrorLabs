@@ -1,3 +1,15 @@
+.container #secret.green {
+  background-color: green; }
+
+.container #secret.red {
+  background-color: red; }
+
+.container #secret.pink {
+  background-color: pink; }
+
+.container #secret.green, .container #secret.red, .container #secret.pink {
+  color: white !important; }
+
 .container .row {
   background-color: #d3d3d3; }
 
@@ -9,7 +21,7 @@
   padding-left: 5px; }
 
 .container #secret.container_header {
-  color: #d3d3d3 !important;
+  color: #d3d3d3;
   padding: 5px;
   margin-top: 20px; }
 
@@ -24,6 +36,9 @@
   padding: 0;
   text-align: center;
   width: calc(100% + 30px); }
+
+.container #clear:hover {
+  box-shadow: 1px 1px 1px #d3d3d3; }
 
 img {
   padding: 5px !important;

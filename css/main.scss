@@ -1,4 +1,18 @@
 .container{
+	#secret{
+		&.green{
+			background-color: green;
+		}
+		&.red{
+			background-color: red;
+		}
+		&.pink{
+			background-color: pink;
+		}
+		&.green,&.red,&.pink{
+			color: white !important;
+		}
+	}
 	.row{
 		background-color: #d3d3d3;
 	}
@@ -11,7 +25,7 @@
 		padding-left: 5px;
 	}
 	#secret.container_header{
-		color: #d3d3d3 !important;
+		color: #d3d3d3;
 		padding: 5px;
 		margin-top: 20px;
 	}
@@ -26,6 +40,9 @@
 		padding: 0;
 		text-align: center;
 		width: calc(100% + 30px);
+	}
+	#clear:hover{
+		box-shadow: 1px 1px 1px #d3d3d3;
 	}
 
 }
